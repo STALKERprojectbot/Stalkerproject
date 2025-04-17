@@ -6,7 +6,7 @@ import random
 from datetime import datetime
 
 import os
-API_TOKEN = '7623761757:AAGRVzakqd1FKDjzBKfROGGrDSS5ZmKxlE8'
+API_TOKEN = os.getenv("BOT_TOKEN")
 logging.basicConfig(level=logging.INFO)
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
