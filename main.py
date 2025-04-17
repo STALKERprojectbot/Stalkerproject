@@ -76,8 +76,7 @@ async def show_menu(message: types.Message):
 async def inventory(message: types.Message):
     cursor.execute("SELECT inventory FROM users WHERE id=?", (message.from_user.id,))
     inv = cursor.fetchone()[0] or ""
-    await message.answer(f"Твой инвентарь:
-{inv if inv else 'Пусто'}")
+    await message.answer(f"Твой инвентарь:{inv if inv else 'Пусто'}")
 
 @dp.message_handler(lambda message: message.text == "⚔️ Бой")
 async def fight(message: types.Message):
