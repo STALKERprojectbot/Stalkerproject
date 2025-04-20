@@ -1,4 +1,4 @@
-
+import os
 from aiogram import Bot, Dispatcher, types, executor
 import sqlite3
 import logging
